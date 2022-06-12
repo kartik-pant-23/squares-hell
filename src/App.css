@@ -1,0 +1,109 @@
+* { box-sizing: border-box; }
+
+body { 
+    margin: 0; 
+    height: 100vh;
+    display: flex;
+    background-color: #303030;
+    font-family: 'Sen', sans-serif;
+    text-align: center;
+}
+
+#root {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 75%;
+    flex-direction: column;
+    background-color: #444444;
+    box-shadow: rgba(0,0,0,0.50) 8px 8px 20px, rgba(256,256,256,0.30) -6px -6px 15px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.header {
+    display: flex;
+    background-color: rgba(256, 0, 0, 0.25);
+    padding: 0 48px;
+    border-radius: 12px 12px 0 0;
+    color: white;
+    align-items: center;
+}
+.header > h1 {
+    padding: 0;
+    margin-right: auto;
+    font-weight: bolder;
+    letter-spacing: 0.1rem;
+}
+.header > h4 { 
+    padding: 0;
+    font-weight: lighter;
+}
+
+.gameRules {
+    margin: 0 5%;
+    margin-top: 32px;
+    padding: 12px 24px;
+    border: 2px solid #e4e4e480;
+    border-radius: 12px;
+    color: #e4e4e480;
+    text-align: start;
+}
+.gameRules > h1 { 
+    margin-bottom: 0; 
+    margin-top: 8px;
+}
+.gameRules > ul { margin-top: 0; }
+
+.gameArea {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 28px;
+    padding: 0 25%;
+    margin: 32px 0;
+}
+.gameArea__item {
+    background-color: #404040;
+    color: white;
+    box-shadow: rgba(0,0,0,0.25) 4px 4px 16px, rgba(256,256,256,0.10) -3px -3px 12px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+.item-selected {
+    background-color: rgba(0,256,0,0.35);
+    box-shadow: rgba(0,0,0,0.35) 4px 4px 16px, rgba(256,256,256,0.20) -3px -3px 12px;
+}
+
+.button {
+    width: 65%;
+    padding: 20px;
+    background-color: rgba(0,0,256,0.15);
+    margin: 0 auto;
+    margin-bottom: 48px;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 8px;
+    box-shadow: rgba(0,0,0,0.25) 4px 4px 16px, rgba(256,256,256,0.10) -3px -3px 12px;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-family: 'Sen', sans-serif;
+    letter-spacing: 0.25rem;
+    cursor: pointer;
+}
+.button:hover {
+    box-shadow: rgba(0,0,0,0.40) 4px 4px 24px, rgba(256,256,256,0.20) -3px -3px 20px;
+}
+.button:active {
+    transform: translateY(4px);
+    box-shadow: rgba(0,0,0,0.20) 4px 4px 12px, rgba(256,256,256,0.10) -3px -3px 8px;
+}
